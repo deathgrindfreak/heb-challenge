@@ -1,0 +1,47 @@
+name:                heb-challenge
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/heb-challenge#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Cooper Bell
+maintainer:          john.cooper.bell@gmail.com
+copyright:           2022 Cooper Bell
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+                     CHANGELOG.md
+
+executable heb-challenge
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  other-modules:       Config
+                     , Model
+                     , Db
+                     , Detection
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , scotty
+                     , uuid
+                     , aeson
+                     , postgresql-simple
+                     , resource-pool
+                     , dhall
+                     , text
+                     , http-types
+                     , wreq
+                     , lens
+                     , lens-aeson
+                     , split
+                     , network-uri
+  ghc-options:         -Wall
+                       -Wcompat
+                       -Widentities
+                       -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns
+                       -Wmissing-export-lists
+                       -Wmissing-home-modules
+                       -Wpartial-fields
+                       -Wredundant-constraints
