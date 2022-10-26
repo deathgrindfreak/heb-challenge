@@ -47,7 +47,7 @@ fetchImage pool imageId = withResource pool $ \conn -> do
       \ FROM image i\
       \ LEFT JOIN image_tag it ON i.id = it.image_id\
       \ LEFT JOIN tag t ON t.id = it.tag_id\
-      \ AND i.id = ?\
+      \ WHERE i.id = ?\
       \ GROUP BY i.id"
       $ Only imageId
   return . one $ r
