@@ -45,6 +45,7 @@ http localhost:3000/images/ce3817a0-1b24-4586-b7fb-a64b4b98b717
 ```
 
 > post `/images` - Inserts an image along with its metadata
+
 Form fields:
 - discover - Turn on image discovery by shipping the image off to Imagga
 - label - A label for the image
